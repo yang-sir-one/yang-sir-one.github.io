@@ -18,7 +18,7 @@
   localSearch: undefined,
   translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
-  highlight: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -157,37 +157,8 @@
 <p>​        ①定义Thread类的子类，并重写该类的run()方法，该run()方法体就代表了线程需要完成的任务。因此吧run()方法称为线程执行体。</p>
 <p>​        ②创建Thread子类的实例，即创建了线程对象。</p>
 <p>​        ③调用线程对象的start()方法来启动该线程。</p>
-<pre><code class="java">/**
- * @program: code
- * @description: 通过继承Thread类创建线程对象
- * @author: yangzhihong
- * @create: 2022-02-28 20:29
- **/
-public class Thread_jc extends Thread &#123;
-    private int i;
-    //重写run()方法，run()方法的方法体就是线程执行体。
-    public void run()&#123;
-        for (i = 0; i &lt; 100; i++) &#123;
-            //d当线程类继承Thread类时，直接使用this即可获取当前线程
-            //Thread对象的getName()返回当前线程的名字
-            //因此可以直接调用getName()方法返回当前线程的名字
-            System.out.println(&quot;我是子线程&quot; + getName() + &quot;&quot; + i);
-        &#125;
-    &#125;
-    public static void main(String[] args)&#123;
-        for (int i = 0; i &lt; 100; i++) &#123;
-            //调用Thread的currentThread()方法获取当前线程
-            System.out.println(&quot;我是主线程&quot; + Thread.currentThread().getName() + &quot;&quot; + i);
-            if (i == 20) &#123;
-                //创建并启动第一个线程
-                new Thread_jc().start();
-                //创建并启动第二个线程
-                new Thread_jc().start();
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@program</span>: code</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>: 通过继承Thread类创建线程对象</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span>: yangzhihong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span>: 2022-02-28 20:29</span><br><span class="hljs-comment"> **/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Thread_jc</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> i;<br>    <span class="hljs-comment">//重写run()方法，run()方法的方法体就是线程执行体。</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>            <span class="hljs-comment">//d当线程类继承Thread类时，直接使用this即可获取当前线程</span><br>            <span class="hljs-comment">//Thread对象的getName()返回当前线程的名字</span><br>            <span class="hljs-comment">//因此可以直接调用getName()方法返回当前线程的名字</span><br>            System.out.println(<span class="hljs-string">&quot;我是子线程&quot;</span> + getName() + <span class="hljs-string">&quot;&quot;</span> + i);<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>            <span class="hljs-comment">//调用Thread的currentThread()方法获取当前线程</span><br>            System.out.println(<span class="hljs-string">&quot;我是主线程&quot;</span> + Thread.currentThread().getName() + <span class="hljs-string">&quot;&quot;</span> + i);<br>            <span class="hljs-keyword">if</span> (i == <span class="hljs-number">20</span>) &#123;<br>                <span class="hljs-comment">//创建并启动第一个线程</span><br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread_jc</span>().start();<br>                <span class="hljs-comment">//创建并启动第二个线程</span><br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread_jc</span>().start();<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
 <p>Thread类提供了常用的API</p>
 <p>Thread.currentThread() ： 静态方法用于获取当前的线程对象。</p>
 <p>getName() : 可以获取线程对象的名称。</p>
@@ -201,42 +172,8 @@ public class Thread_jc extends Thread &#123;
 <p>​        ②创建Runnable实现类的实例，并以此作为Thread的target来创建Thread对象，该Thread对象才是真正的线程对象。</p>
 <p>​        ③调用线程线程对象的start()方法来启动线程。</p>
 <p>​        **注意：Runnable对象仅仅作为Thread对象的target，Runnable实现类里包含的run()方法仅作为线程执行体。而实际的线程对象依然是Thread实例，只是Thread线程负责执行其target的run()方法。4</p>
-<pre><code class="java">/**
- * @program: code
- * @description: 实现Runnable接口创建线程对象
- * @author: yangzhihong
- * @create: 2022-03-01 10:24
- **/
-// 自定义一个任务类
-class MyTask implements Runnable &#123;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@program</span>: code</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>: 实现Runnable接口创建线程对象</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span>: yangzhihong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span>: 2022-03-01 10:24</span><br><span class="hljs-comment"> **/</span><br><span class="hljs-comment">// 自定义一个任务类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTask</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Runnable</span> &#123;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>; i&lt;=<span class="hljs-number">100</span>; i++) &#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;----&quot;</span> + <span class="hljs-string">&quot;刷出第&quot;</span> + i + <span class="hljs-string">&quot;个小怪&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">RunnableThread</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-comment">// 创建任务对象</span><br>        <span class="hljs-type">MyTask</span> <span class="hljs-variable">myTask</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyTask</span>();<br><br>        <span class="hljs-comment">// 创建线程对象</span><br>        <span class="hljs-type">Thread</span> <span class="hljs-variable">thread</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(myTask, <span class="hljs-string">&quot;子线程&quot;</span>);<br>        <span class="hljs-comment">// 开启子线程对象的任务</span><br>        thread.start();<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">1</span>; j&lt;=<span class="hljs-number">100</span>; j++) &#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;----&quot;</span> + <span class="hljs-string">&quot;刷出第&quot;</span> + j + <span class="hljs-string">&quot;个大BOSS&quot;</span>);<br>        &#125;<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-    @Override
-    public void run() &#123;
-        for(int i=1; i&lt;=100; i++) &#123;
-            System.out.println(Thread.currentThread().getName() + &quot;----&quot; + &quot;刷出第&quot; + i + &quot;个小怪&quot;);
-        &#125;
-    &#125;
-&#125;
-
-public class RunnableThread &#123;
-
-    public static void main(String[] args) &#123;
-
-        // 创建任务对象
-        MyTask myTask = new MyTask();
-
-        // 创建线程对象
-        Thread thread = new Thread(myTask, &quot;子线程&quot;);
-        // 开启子线程对象的任务
-        thread.start();
-
-        for(int j=1; j&lt;=100; j++) &#123;
-            System.out.println(Thread.currentThread().getName() + &quot;----&quot; + &quot;刷出第&quot; + j + &quot;个大BOSS&quot;);
-        &#125;
-    &#125;
-
-&#125;
-</code></pre>
 <h3 id="3、使用Callable和Future创建线程"><a href="#3、使用Callable和Future创建线程" class="headerlink" title="3、使用Callable和Future创建线程"></a>3、使用Callable和Future创建线程</h3><p>​        从Java5 开始，Java提供了Callable接口，该接口与Runnable接口非常相似，Callable接口提供了一个call()方法可以作为线程执行体，但call()方法比run()方法功能更强大：<strong>可以有返回值、可以声明抛出异常。</strong></p>
 <p>​        Java5 提供了一个与Callable配套的Future接口，Future有个实现类FutureTask，该类的RunnableFuture接口对Future、Runnable都进行了实现。可以作为中介来关联Runnable与Future，并通过Future的公共方法V get() 获取到Callable的返回值，于是乎Callable对象就可以作为Thread的target来创建线程了。（V get()方法中的V是表示泛型，表示Callable接口里的类型必须与call()返回值类型相同）</p>
 <p> <img src="https://img-blog.csdnimg.cn/eb1b0288f5ee4f42b35cc351d7438997.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5Yqx5b-X6KaB5b2T5p625p6E5biI55qE5bCP5p2o,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center"> </p>
@@ -245,56 +182,8 @@ public class RunnableThread &#123;
 <p>​        ②使用FutureTask类包装Callable对象，该FutureTask对象封装了该Callable对象的call()方法的返回值。</p>
 <p>​        ③使用FutureTask对象作为Thread对象的target创建并启动新线程。</p>
 <p>​        ④调用FutureTask对象的get()方法来获得子线程执行结束后的返回值。</p>
-<pre><code class="java">import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.concurrent.Callable;<br><span class="hljs-keyword">import</span> java.util.concurrent.ExecutionException;<br><span class="hljs-keyword">import</span> java.util.concurrent.FutureTask;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@program</span>: code</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>: 通过Callable与Future来创建线程对象</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span>: yangzhihong</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span>: 2022-03-01 11:56</span><br><span class="hljs-comment"> **/</span><br><span class="hljs-comment">// 实现了Callable接口的类，也是一个任务类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyCall</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Callable</span>&lt;Integer&gt; &#123;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception &#123;<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>; i&lt;=<span class="hljs-number">100</span>; i++) &#123;<br>            sum += i;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> sum;<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CallableFutureThread</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> ExecutionException, InterruptedException &#123;<br><br>        <span class="hljs-comment">// 创建任务对象</span><br>        <span class="hljs-type">MyCall</span> <span class="hljs-variable">myCall</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyCall</span>();<br>        <span class="hljs-comment">// 创建FutureTask对象这个对象实现了RunnableFuture接口</span><br>        <span class="hljs-comment">// RunnableFuture多继承了Runnable接口和Future接口</span><br>        <span class="hljs-comment">// 在构造FutureTask对象时，可以通过构造方法将Callable接口的</span><br>        <span class="hljs-comment">// 实现对象传入</span><br>        FutureTask&lt;Integer&gt; futureTask = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FutureTask</span>&lt;&gt;(myCall);<br>        <span class="hljs-comment">// 创建一个线程对象</span><br>        <span class="hljs-type">Thread</span> <span class="hljs-variable">thread</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(futureTask);<br>        thread.start();<br>        <span class="hljs-comment">// 通过get()方法来获取Callable任务方法的返回结果</span><br>        <span class="hljs-keyword">if</span>(futureTask.isDone()) &#123;<br>            <span class="hljs-type">Integer</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> futureTask.get();<br>            System.out.println(result);<br>        &#125;<br><br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-/**
- * @program: code
- * @description: 通过Callable与Future来创建线程对象
- * @author: yangzhihong
- * @create: 2022-03-01 11:56
- **/
-// 实现了Callable接口的类，也是一个任务类
-class MyCall implements Callable&lt;Integer&gt; &#123;
-
-    @Override
-    public Integer call() throws Exception &#123;
-
-        int sum = 0;
-
-        for(int i=1; i&lt;=100; i++) &#123;
-            sum += i;
-        &#125;
-
-        return sum;
-    &#125;
-&#125;
-
-public class CallableFutureThread &#123;
-
-    public static void main(String[] args) throws ExecutionException, InterruptedException &#123;
-
-        // 创建任务对象
-        MyCall myCall = new MyCall();
-        // 创建FutureTask对象这个对象实现了RunnableFuture接口
-        // RunnableFuture多继承了Runnable接口和Future接口
-        // 在构造FutureTask对象时，可以通过构造方法将Callable接口的
-        // 实现对象传入
-        FutureTask&lt;Integer&gt; futureTask = new FutureTask&lt;&gt;(myCall);
-        // 创建一个线程对象
-        Thread thread = new Thread(futureTask);
-        thread.start();
-        // 通过get()方法来获取Callable任务方法的返回结果
-        if(futureTask.isDone()) &#123;
-            Integer result = futureTask.get();
-            System.out.println(result);
-        &#125;
-
-    &#125;
-
-&#125;
-</code></pre>
 <h3 id="4、这三种创建线程方式的对比"><a href="#4、这三种创建线程方式的对比" class="headerlink" title="4、这三种创建线程方式的对比"></a>4、这三种创建线程方式的对比</h3><p>​        通过继承Thread类和实现Runnable、Callable接口都可以实现多线程，不过实现Runnable接口与实现Callable接口的方式基本相同，只是Callable接口里定义的方法有返回值和可以声明抛出异常，因此可以将Runnable和Callable归为同一种实现接口方式。</p>
 <p>​        <strong>实现接口方式创建线程优缺点：</strong></p>
 <p>​        ①线程类只是实现了Runnable接口或Callable接口，还可以继承其他类。</p>
