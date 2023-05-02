@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/fa-home/index.html</loc>
+    <loc>http://121.43.167.55/tags/index.html</loc>
     
     <lastmod>2022-01-28</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/index.html</loc>
+    <loc>http://121.43.167.55/fa-home/index.html</loc>
     
     <lastmod>2022-01-28</lastmod>
     
@@ -311,28 +311,14 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/JavaScript/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/DOM/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/HTML/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://121.43.167.55/tags/Java/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -353,14 +339,28 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>http://121.43.167.55/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</loc>
+    <loc>http://121.43.167.55/tags/JavaScript/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/DOM/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/HTML/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
