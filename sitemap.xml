@@ -318,34 +318,6 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/IO%E6%B5%81/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://121.43.167.55/tags/JavaScript/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -367,14 +339,28 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/MySQL/</loc>
+    <loc>http://121.43.167.55/tags/IO%E6%B5%81/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>http://121.43.167.55/tags/%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -389,6 +375,20 @@
   
   <url>
     <loc>http://121.43.167.55/tags/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/MySQL/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
