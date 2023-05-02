@@ -297,6 +297,20 @@
   </url>
   
   <url>
+    <loc>http://121.43.167.55/tags/Go/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/Golang/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://121.43.167.55/tags/Java/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -318,27 +332,6 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/Go/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/Golang/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://121.43.167.55/tags/JavaScript/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,6 +347,13 @@
   
   <url>
     <loc>http://121.43.167.55/tags/HTML/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -423,13 +423,6 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E5%8F%98%E9%87%8F/</loc>
-    <lastmod>2023-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://121.43.167.55/tags/spring/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -444,7 +437,7 @@
   </url>
   
   <url>
-    <loc>http://121.43.167.55/tags/%E7%BC%93%E5%AD%98/</loc>
+    <loc>http://121.43.167.55/tags/%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -459,6 +452,13 @@
   
   <url>
     <loc>http://121.43.167.55/tags/%E9%80%92%E5%BD%92/</loc>
+    <lastmod>2023-05-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.43.167.55/tags/%E7%BC%93%E5%AD%98/</loc>
     <lastmod>2023-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
